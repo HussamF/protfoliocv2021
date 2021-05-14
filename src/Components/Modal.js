@@ -1,12 +1,13 @@
+import React, { useRef, useEffect, useCallback } from 'react';
 import { useGlobalContext } from '../context';
 import styled from 'styled-components';
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 import CloseIcon from '@material-ui/icons/Close';
-import React, { useRef, useEffect, useCallback } from 'react';
+
 import { useSpring, animated } from 'react-spring';
 
 export const Modal = ({ company, dates, duties, title }) => {
-  const { isModalOpen, closeModal, setIsModalOpen } = useGlobalContext();
+  const { isModalOpen, closeModal } = useGlobalContext();
   const modalOverlayRef = useRef();
   const animation = useSpring({
     config: {
