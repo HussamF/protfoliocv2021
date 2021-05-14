@@ -40,8 +40,10 @@ export const Modal = ({ dates, duties, title }) => {
       {/* job info */}
       {isModalOpen ? (
         <ModalOverlay onClick={clickOverlayCloseModal} ref={modalOverlayRef}>
-          <animated.div style={animation}>
-            <ModalContainer>
+          <animated.section style={animation} className='anim'>
+            <ModalContainer
+            // style={{ width: '970px', maxWidth: '90% !important' }}
+            >
               <button className='close-modal-btn' onClick={closeModal}>
                 <CloseIcon />
               </button>
@@ -62,7 +64,7 @@ export const Modal = ({ dates, duties, title }) => {
                 );
               })}
             </ModalContainer>
-          </animated.div>
+          </animated.section>
         </ModalOverlay>
       ) : null}
     </>
@@ -81,7 +83,15 @@ const ModalOverlay = styled.div`
   justify-content: center;
   margin: 0 auto;
   overflow-y: scroll;
-  z-index: 200;
+  z-index: 100;
+  .anim {
+    max-width: 90% !important;
+    width: 970px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
 `;
 
 const ModalContainer = styled.div`
@@ -89,15 +99,13 @@ const ModalContainer = styled.div`
   flex-direction: column;
   background-color: ${({ theme }) => theme.background};
   padding: 3rem 1rem;
-  z-index: 1100;
+  max-width: 90% !important;
   width: 970px;
   max-height: 90vh;
-  max-width: 90%;
   position: relative;
   overflow-y: auto;
   margin-left: 30rem;
-  z-index: 200;
-
+  z-index: 100;
   @media screen and (max-width: 1100px) {
     margin-left: 20rem;
   }
