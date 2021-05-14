@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useSpring, animated } from 'react-spring';
 import { data } from '../Data/data';
 import styled from 'styled-components';
 import Title from '../Components/Title';
@@ -7,7 +6,7 @@ import { useGlobalContext } from '../context';
 import { Modal } from '../Components/Modal';
 
 const Experience = () => {
-  const { isModalOpen, closeModal, openModal } = useGlobalContext();
+  const { openModal } = useGlobalContext();
   const [value, setValue] = useState(0);
   const showModal = (index) => {
     openModal();
