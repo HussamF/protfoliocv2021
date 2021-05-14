@@ -1,38 +1,68 @@
-import React from 'react';
 import { useGlobalContext } from '../context';
 import styled from 'styled-components';
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 import CloseIcon from '@material-ui/icons/Close';
+import React, { useRef, useEffect, useCallback } from 'react';
+import { useSpring, animated } from 'react-spring';
 
 export const Modal = ({ company, dates, duties, title }) => {
-  const { isModalOpen, closeModal, openModal } = useGlobalContext();
+  const { isModalOpen, closeModal, setIsModalOpen } = useGlobalContext();
+  const modalOverlayRef = useRef();
+  const animation = useSpring({
+    config: {
+      duration: 300,
+    },
+    opacity: isModalOpen ? 1 : 0,
+    transform: isModalOpen ? `translateY(0%)` : `translateY(-100%)`,
+  });
+  const clickOverlayCloseModal = (e) => {
+    if (modalOverlayRef.current === e.target) {
+      closeModal();
+    }
+  };
 
+  // Close modal on Escape
+  const keyPress = useCallback(
+    (e) => {
+      if (e.key === 'Escape' && isModalOpen) {
+        closeModal();
+      }
+    },
+    [closeModal, isModalOpen]
+  );
+
+  useEffect(() => {
+    document.addEventListener('keydown', keyPress);
+    return () => document.removeEventListener('keydown', keyPress);
+  }, [keyPress]);
   return (
     <>
       {/* job info */}
       {isModalOpen ? (
-        <ModalOverlay>
-          <ModalContainer>
-            <button className='close-modal-btn' onClick={closeModal}>
-              <CloseIcon />
-            </button>
+        <ModalOverlay onClick={clickOverlayCloseModal} ref={modalOverlayRef}>
+          <animated.div style={animation}>
+            <ModalContainer>
+              <button className='close-modal-btn' onClick={closeModal}>
+                <CloseIcon />
+              </button>
 
-            <h3>
-              <span>Jop Title</span> : {title}
-            </h3>
+              <h3>
+                <span>Jop Title</span> : {title}
+              </h3>
 
-            <p className='job-date'>
-              <span>Place and Date</span> : {dates}
-            </p>
-            {duties.map((duty, index) => {
-              return (
-                <JobDesc key={index} className='job-desc'>
-                  <DoubleArrowIcon className='job-icon' />
-                  <p>{duty}</p>
-                </JobDesc>
-              );
-            })}
-          </ModalContainer>
+              <p className='job-date'>
+                <span>Place and Date</span> : {dates}
+              </p>
+              {duties.map((duty, index) => {
+                return (
+                  <JobDesc key={index} className='job-desc'>
+                    <DoubleArrowIcon className='job-icon' />
+                    <p>{duty}</p>
+                  </JobDesc>
+                );
+              })}
+            </ModalContainer>
+          </animated.div>
         </ModalOverlay>
       ) : null}
     </>

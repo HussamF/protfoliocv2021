@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-
-import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
-import CloseIcon from '@material-ui/icons/Close';
+import { useSpring, animated } from 'react-spring';
 import { data } from '../Data/data';
 import styled from 'styled-components';
 import Title from '../Components/Title';
@@ -9,17 +7,14 @@ import { useGlobalContext } from '../context';
 import { Modal } from '../Components/Modal';
 
 const Experience = () => {
-  // const [loading, setLoading] = useState(true)
-  // const [jobs, setJobs] = useState([data]);
   const { isModalOpen, closeModal, openModal } = useGlobalContext();
   const [value, setValue] = useState(0);
   const showModal = (index) => {
     openModal();
     setValue(index);
   };
-  console.log(isModalOpen);
   const { company, dates, duties, title } = data[value];
-  console.log(title);
+
   return (
     <>
       <Title title={'experience'} span={'experience'} />
@@ -72,7 +67,6 @@ const BtnCompanyContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* gap: 2rem; */
   position: relative;
   h1 {
     font-size: var(--h-fontSize);
@@ -99,7 +93,6 @@ const BtnCompanyContainer = styled.div`
     cursor: pointer;
     font-size: var(--p-fontSize);
     color: ${({ theme }) => theme.color};
-    /* border: 1px solid ${({ theme }) => theme.color}; */
     padding: 0.5rem 2rem;
     border-radius: 5px;
     transition: var(--transition-btn-easeInOut);
@@ -107,8 +100,9 @@ const BtnCompanyContainer = styled.div`
     box-shadow: inset 0 -0.6em 1em -0.35em rgba(0, 0, 0, 0.17),
       inset 0 0.6em 2em -0.3em rgba(255, 255, 255, 0.15),
       inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
-    /* -webkit-box-shadow: 0px 0px 10px 5px ${({ theme }) => theme.shadow};
-    box-shadow: 0px 0px 5px 3px ${({ theme }) => theme.shadow}; */
+    -webkit-box-shadow: inset 0 -0.6em 1em -0.35em rgba(0, 0, 0, 0.17),
+      inset 0 0.6em 2em -0.3em rgba(255, 255, 255, 0.15),
+      inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
     margin-bottom: 2rem;
     &:hover {
       color: var(--primary-color);
