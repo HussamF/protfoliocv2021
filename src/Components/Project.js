@@ -1,5 +1,5 @@
 import React from 'react';
-import MacPhoto from '../Imgs/mac.png';
+import MacPhoto from '../Imgs/mac1.png';
 import IphonePhoto from '../Imgs/iphone.png';
 import { projectData } from '../Data/data';
 import styled from 'styled-components';
@@ -7,7 +7,9 @@ import Website from '../Imgs/pro1phone.png';
 import WS from '../Imgs/pro1.png';
 
 const Projects = () => {
-  const { id, headerDesc, DetailDesc, imageMac, imageIphone } = projectData;
+  const { id, headerDesc, DetailDesc, imageMac, imageIphone, projectStory } = {
+    projectData,
+  };
   return (
     <>
       <ProjectContainer>
@@ -31,7 +33,7 @@ const Projects = () => {
             </MacPhone>
           </Project>
           <ProjectContent>
-            <ProjectHeaderDesc>UI/UX Architature Office</ProjectHeaderDesc>
+            <ProjectHeaderDesc>HTML5,CSS,JavaScript</ProjectHeaderDesc>
             <ProjectDetailDesc>HTML5,CSS,JavaScript</ProjectDetailDesc>
             <ProjectStory>
               This was my first project that I delieverd to a clinet business
