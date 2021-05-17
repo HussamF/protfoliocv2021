@@ -18,7 +18,7 @@ function NavCloseBtn({ theme }) {
 
 const NavCloseBtnStyle = styled.div`
   display: none;
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 1200px) {
     display: block;
     img {
       width: 30px;

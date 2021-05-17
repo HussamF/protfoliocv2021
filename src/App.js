@@ -52,11 +52,11 @@ const MainContentStyle = styled.main`
   margin-left: 30rem;
   min-height: 100vh;
 
-  @media screen and (max-width: 1100px) {
-    margin-left: 20rem;
+  @media screen and (max-width: 1200px) {
+    margin: 0 auto;
   }
   @media screen and (max-width: 650px) {
-    margin: 0 auto;
+    /* margin: 0 auto; */
   }
 `;
 export default App;

@@ -67,11 +67,12 @@ const NavbarStyled = styled.nav`
   height: 100vh;
   z-index: 101;
   transition: var(--transition-easeInOut-mode);
-  @media screen and (max-width: 1100px) {
-    width: 20rem;
+  @media screen and (max-width: 1200px) {
+    /* width: 20rem; */
+    left: -30rem;
   }
   @media screen and (max-width: 650px) {
-    left: -30rem;
+    /* left: -30rem; */
 
     @media screen and (max-width: 650px) {
     }

@@ -10,7 +10,7 @@ export const Modal = ({ dates, duties, title }) => {
   const modalOverlayRef = useRef();
   const animation = useSpring({
     config: {
-      duration: 300,
+      duration: 500,
     },
     opacity: isModalOpen ? 1 : 0,
     transform: isModalOpen ? `translateY(0%)` : `translateY(-100%)`,
@@ -41,9 +41,7 @@ export const Modal = ({ dates, duties, title }) => {
       {isModalOpen ? (
         <ModalOverlay onClick={clickOverlayCloseModal} ref={modalOverlayRef}>
           <animated.section style={animation} className='anim'>
-            <ModalContainer
-            // style={{ width: '970px', maxWidth: '90% !important' }}
-            >
+            <ModalContainer>
               <button className='close-modal-btn' onClick={closeModal}>
                 <CloseIcon />
               </button>

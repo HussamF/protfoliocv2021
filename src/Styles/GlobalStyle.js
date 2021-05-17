@@ -25,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
     --transition-btn-easeInOut:all .25s ease-in-out;
     --p-fontSize: 1.8rem;
     --h-fontSize: 2.1rem;
+    /* --h-thin-fontSize: 2.1rem; */
     --shadow-white:rgba(255, 255, 255,.05);
     --shadow-white-hover:rgba(255, 255, 255,.09);
     --shadow-black:rgba(0, 0, 0,.05);
@@ -112,7 +113,7 @@ const GlobalStyle = createGlobalStyle`
 
 
 
- @media  screen and (max-width: 650px){
+ @media  screen and (max-width: 1200px){
     .nav-open {
     left: 0 !important;
     width: 100vw !important;

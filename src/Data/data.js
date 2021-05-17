@@ -51,3 +51,15 @@ export const data = [
     company: 'KuaPing Import and Export Trading Company',
   },
 ];
+
+export const projectData = [
+  {
+    id: '1',
+    headerDesc: 'UI/UX total desgin and styling',
+    detailDesc: 'HTML5,CSS,JavaScript',
+    projectStory:
+      'This was my first project that I delieverd to a clinet business 1/11/2020 , it contains information about the office and the recent projects that they have done in the past',
+    imageMac: '../Imgs/pro1phone.png',
+    imageIphone: '../Imgs/pro1.png',
+  },
+];
