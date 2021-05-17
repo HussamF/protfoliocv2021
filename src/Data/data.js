@@ -1,3 +1,10 @@
+import LwisPhone from '../Imgs/gmadphone.png';
+import LwisPc from '../Imgs/gmadpc.png';
+import EmbPhone from '../Imgs/embphone.png';
+import EmbPc from '../Imgs/embpc.png';
+import SamtechPhone from '../Imgs/samtechphone.png';
+import SamtechPc from '../Imgs/samtechpc.png';
+
 export const data = [
   {
     id: '1',
@@ -59,7 +66,26 @@ export const projectData = [
     detailDesc: 'HTML5,CSS,JavaScript',
     projectStory:
       'This was my first project that I delieverd to a clinet business 1/11/2020 , it contains information about the office and the recent projects that they have done in the past',
-    imageMac: '../Imgs/pro1phone.png',
-    imageIphone: '../Imgs/pro1.png',
+    imageMac: `${LwisPc}`,
+    imageIphone: `${LwisPhone}`,
+  },
+  {
+    id: '2',
+    headerDesc: 'UI/UX total desgin and styling',
+    detailDesc: 'HTML5,CSS,JavaScript,react',
+    projectStory:
+      'This was my first project that I delieverd to a clinet business 1/11/2020 , it contains information about the office and the recent projects that they have done in the past',
+
+    imageMac: `${SamtechPc}`,
+    imageIphone: `${SamtechPhone}`,
+  },
+  {
+    id: '3',
+    headerDesc: 'UI/UX total desgin and styling',
+    detailDesc: 'HTML5,CSS,JavaScript,react',
+    projectStory:
+      'This was my first project that I delieverd to a clinet business 1/11/2020 , it contains information about the office and the recent projects that they have done in the past',
+    imageMac: `${EmbPc}`,
+    imageIphone: `${EmbPhone}`,
   },
 ];

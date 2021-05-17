@@ -7,18 +7,8 @@ function Portfolio() {
     <>
       <Title title='Portfolio' span='Portfolio' />
       <Project />
-      <BreakLine />
-      <Project />
-      <BreakLine />
-      <Project />
     </>
   );
 }
 
-const BreakLine = styled.div`
-  width: 80%;
-  height: 2px;
-  background-color: var(--primary-color);
-  margin: 0 auto;
-`;
 export default Portfolio;

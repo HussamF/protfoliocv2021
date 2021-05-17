@@ -3,45 +3,41 @@ import MacPhoto from '../Imgs/mac1.png';
 import IphonePhoto from '../Imgs/iphone.png';
 import { projectData } from '../Data/data';
 import styled from 'styled-components';
-import Website from '../Imgs/pro1phone.png';
-import WS from '../Imgs/pro1.png';
 
 const Projects = () => {
-  const { id, headerDesc, DetailDesc, imageMac, imageIphone, projectStory } = {
-    projectData,
-  };
   return (
     <>
       <ProjectContainer>
-        <ProjectWrapper>
-          <Project>
-            <MacPc>
-              <MacPcImage src={MacPhoto} />
-              <InsidePcImage
-                style={{
-                  background: `url(${WS})`,
-                }}
-              />
-            </MacPc>
-            <MacPhone>
-              <MacPhoneImage src={IphonePhoto} />
-              <InsidePhoneImage
-                style={{
-                  background: `url(${Website})`,
-                }}
-              />
-            </MacPhone>
-          </Project>
-          <ProjectContent>
-            <ProjectHeaderDesc>HTML5,CSS,JavaScript</ProjectHeaderDesc>
-            <ProjectDetailDesc>HTML5,CSS,JavaScript</ProjectDetailDesc>
-            <ProjectStory>
-              This was my first project that I delieverd to a clinet business
-              1/11/2020 , it contains information about the office and the
-              recent projects that they have done in the past
-            </ProjectStory>
-          </ProjectContent>
-        </ProjectWrapper>
+        {projectData.map((item) => {
+          return (
+            <ProjectWrapper key={item.id}>
+              <Project>
+                <MacPc>
+                  <MacPcImage src={MacPhoto} />
+                  <InsidePcImage
+                    style={{
+                      background: `url(${item.imageMac})`,
+                    }}
+                  />
+                </MacPc>
+                <MacPhone>
+                  <MacPhoneImage src={IphonePhoto} />
+                  <InsidePhoneImage
+                    style={{
+                      background: `url(${item.imageIphone})`,
+                    }}
+                  />
+                </MacPhone>
+              </Project>
+              <ProjectContent>
+                <ProjectHeaderDesc>{item.headerDesc}</ProjectHeaderDesc>
+                <ProjectDetailDesc>{item.detailDesc}</ProjectDetailDesc>
+                <ProjectStory>{item.projectStory}</ProjectStory>
+              </ProjectContent>
+              <BreakLine></BreakLine>
+            </ProjectWrapper>
+          );
+        })}
       </ProjectContainer>
     </>
   );
@@ -58,7 +54,6 @@ const ProjectWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
   margin: 0 auto;
 `;
 
@@ -66,7 +61,6 @@ const Project = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* gap: 3rem; */
   width: 100%;
   margin: 0 auto;
   padding-top: 10rem;
@@ -146,102 +140,12 @@ const ProjectStory = styled.p`
   color: ${({ theme }) => theme.color};
 `;
 
-// const ProjectContainer = styled.div
-// `;
-// //   min-height: 100vh;
-// // `;
-// const ProjectWrapper = styled.div`
-//   position: relative;
-//   display: flex;
-//   width: 1170px;
-//   max-width: 90%;
-//   margin: 0 auto;
-
-//   @media screen and (max-width: 920px) {
-//   }
-//   @media screen and (max-width: 600px) {
-//   }
-// `;
-
-// const ProjectHeader = styled.h1`
-//   @media screen and (max-width: 480px) {
-//   }
-// `;
-
-// const Project = styled.div`
-//   margin: 0 auto;
-//   display: flex;
-//   align-items: center;
-//   flex-direction: column;
-//   image {
-//   }
-// `;
-// const IphoneImg = styled.div`
-//   position: relative;
-//   width: 606px;
-//   height: 489px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// `;
-
-// const InsidePcImage = styled.image`
-//   width: 300px;
-//   height: 400px;
-// `;
-
-// const InsidePhoneImage = styled.image`
-//   width: 500px;
-//   min-height: 400px;
-
-// `;
-
-// const ProjectImgs = styled.div`
-//   display: flex;
-//   gap: 3rem;
-//   margin: 0 auto;
-//   padding: 6rem;
-// `;
-// const ProjectContent = styled.div``;
-
-// const ProjectHeaderDesc = styled.p`
-//   color: #010606;
-// `;
-// const ProjectDetailDesc = styled.p`
-//   color: #ff9a63;
-//   font-size: 0.9rem;
-//   font-weight: bold;
-// `;
-
-// export const Mac = styled.div`
-//   position: relative;
-//   width: 606px;
-//   height: 489px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-
-//   @media screen and (max-width: 600px) {
-//     display: none;
-//   }
-// `;
-
-// const Iphone = styled.div`
-//   position: relative;
-//   width: 245px;
-//   height: 383px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-direction: column;
-//   margin-top: 4rem;
-// `;
-
-// const ImgPC = styled.img`
-//   width: 100%;
-// `;
-// const ImgPhone = styled.img`
-//   width: 100%;
-// `;
+const BreakLine = styled.div`
+  width: 80%;
+  height: 2px;
+  background-color: var(--primary-color);
+  margin: 0 auto;
+  margin-top: 6rem;
+`;
 
 export default Projects;
