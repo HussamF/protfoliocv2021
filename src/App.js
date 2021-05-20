@@ -10,10 +10,11 @@ import { ThemeToggleBTN } from './Components/ThemeToggleBTN';
 import GlobalStyle, { lightTheme, darkTheme } from './Styles/GlobalStyle';
 import NavOpenBtn from './Components/NavOpenBtn';
 import Navbar from './Components/Navbar';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 function App() {
-  const [theme, toggleTheme] = useDarkMode();
+  let [theme, toggleTheme] = useDarkMode();
+  theme = localStorage.getItem('theme', theme);
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
 
   return (
@@ -28,16 +29,16 @@ function App() {
             <Route path='/' exact>
               <Home />
             </Route>
-            <Route path='/about' exact>
+            <Route path='/about'>
               <About />
             </Route>
-            <Route path='/experience' exact>
+            <Route path='/experience'>
               <Experience />
             </Route>
-            <Route path='/portfolio' exact>
+            <Route path='/portfolio'>
               <Portfolio />
             </Route>
-            <Route path='/contact' exact>
+            <Route path='/contact'>
               <Contact />
             </Route>
           </Switch>

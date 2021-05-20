@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import GithubIcon from '@material-ui/icons/GitHub';
 
 import DomainDisabledIcon from '@material-ui/icons/DomainDisabled';
+import DomainDisabledRoundedIcon from '@material-ui/icons/DomainDisabledRounded';
 
 const Projects = () => {
   return (
@@ -35,24 +36,7 @@ const Projects = () => {
               <ProjectContent>
                 <ProjectHeaderDesc>{item.headerDesc}</ProjectHeaderDesc>
                 <ProjectDetailDesc>{item.detailDesc}</ProjectDetailDesc>
-                <ProjectStory>
-                  {item.projectStory}
-                  {/* <a
-                    href='javascript:void(0)'
-                    className='icon-link'
-                    target='_blank'
-                  >
-                    <GithubIcon className='social-icon' />
-                  </a>
-
-                  <a
-                    href='http://www.linkedin.com/in/hussam-fanous-1b356511a'
-                    target='_blank'
-                    className='icon-link'
-                  >
-                    <DomainDisabledIcon className='social-icon' />
-                  </a> */}
-                </ProjectStory>
+                <ProjectStory>{item.projectStory}</ProjectStory>
                 <SourceInfo>
                   <p>check the source code</p>
                   <a
@@ -68,7 +52,7 @@ const Projects = () => {
                     target='_blank'
                     className='icon-link'
                   >
-                    <DomainDisabledIcon className='social-icon' />
+                    <DomainDisabledRoundedIcon className='social-icon' />
                   </a>
                 </SourceInfo>
               </ProjectContent>
