@@ -25,13 +25,16 @@ const Experience = () => {
               <h1>Companies I worked with</h1>
               {data.map((item, index) => {
                 return (
-                  <button
-                    key={item.id}
-                    onClick={() => showModal(index)}
-                    className={`job-btn ${index === value && 'active-btn'}`}
-                  >
-                    {item.company}
-                  </button>
+                  <CompanyDetails>
+                    <h5> {item.company}</h5>
+                    <button
+                      key={item.id}
+                      onClick={() => showModal(index)}
+                      className={`job-btn ${index === value && 'active-btn'}`}
+                    >
+                      Role Details
+                    </button>
+                  </CompanyDetails>
                 );
               })}
             </BtnCompanyContainer>
@@ -84,25 +87,44 @@ const BtnCompanyContainer = styled.div`
       background-color: ${({ theme }) => theme.color};
     }
   }
+`;
+
+const CompanyDetails = styled.div`
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  @media screen and (max-width: 630px) {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  h5 {
+    font-size: var(--p-fontSize);
+    padding: 0.5rem 2rem;
+    /* margin-bottom: 2rem; */
+    color: ${({ theme }) => theme.color};
+  }
   button {
     border: none;
     outline: none;
-    display: block;
+    display: inline-block;
     background: none;
     cursor: pointer;
-    font-size: var(--p-fontSize);
+    font-size: 12px;
     color: ${({ theme }) => theme.color};
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 1rem;
     border-radius: 5px;
     transition: var(--transition-btn-easeInOut);
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 6px 0px,
+      rgba(255, 255, 255, 0.8) -2px -2px 6px 0px;
+    /* box-shadow: rgba(60, 64, 67, 0.3) 1px 1px 2px 3px,
+      rgba(60, 64, 67, 0.4) 5px 3px 2px 3px; */
+    /* -webkit-box-shadow: inset 0 -0.6em 1em -0.35em rgba(0, 0, 0, 0.5),
+      inset 0 0.6em 2em -0.3em rgba(255, 255, 255, 0.15),
+      inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12); */
 
-    box-shadow: inset 0 -0.6em 1em -0.35em rgba(0, 0, 0, 0.17),
-      inset 0 0.6em 2em -0.3em rgba(255, 255, 255, 0.15),
-      inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
-    -webkit-box-shadow: inset 0 -0.6em 1em -0.35em rgba(0, 0, 0, 0.17),
-      inset 0 0.6em 2em -0.3em rgba(255, 255, 255, 0.15),
-      inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
-    margin-bottom: 2rem;
     &:hover {
       color: var(--primary-color);
     }

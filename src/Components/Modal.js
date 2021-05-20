@@ -102,18 +102,20 @@ const ModalContainer = styled.div`
   max-height: 90vh;
   position: relative;
   overflow-y: auto;
-  margin-left: 30rem;
+
   z-index: 100;
+  border-radius: 20px;
   @media screen and (max-width: 1100px) {
-    margin-left: 20rem;
+    /* margin-left: 20rem; */
   }
   @media screen and (max-width: 650px) {
     margin: 0 auto;
   }
   .close-modal-btn {
     position: absolute;
-    right: 1rem;
-    top: 1rem;
+    right: 1.5rem;
+    top: 1.5rem;
+    border: none;
   }
 
   h1,

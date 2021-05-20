@@ -3,6 +3,8 @@ import MacPhoto from '../Imgs/mac1.png';
 import IphonePhoto from '../Imgs/iphone.png';
 import { projectData } from '../Data/data';
 import styled from 'styled-components';
+import GithubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 const Projects = () => {
   return (
@@ -33,6 +35,23 @@ const Projects = () => {
                 <ProjectHeaderDesc>{item.headerDesc}</ProjectHeaderDesc>
                 <ProjectDetailDesc>{item.detailDesc}</ProjectDetailDesc>
                 <ProjectStory>{item.projectStory}</ProjectStory>
+                <SourceInfo>
+                  <a
+                    href='javascript:void(0)'
+                    className='icon-link'
+                    target='_blank'
+                  >
+                    <GithubIcon className='social-icon' />
+                  </a>
+
+                  <a
+                    href='http://www.linkedin.com/in/hussam-fanous-1b356511a'
+                    target='_blank'
+                    className='icon-link'
+                  >
+                    <LinkedInIcon className='social-icon' />
+                  </a>
+                </SourceInfo>
               </ProjectContent>
               <BreakLine></BreakLine>
             </ProjectWrapper>
@@ -42,6 +61,8 @@ const Projects = () => {
     </>
   );
 };
+
+const SourceInfo = styled.div``;
 
 const ProjectContainer = styled.div`
   width: 1170px;
@@ -146,6 +167,9 @@ const BreakLine = styled.div`
   background-color: var(--primary-color);
   margin: 0 auto;
   margin-top: 6rem;
+  &::last-child {
+    background-color: transparent;
+  }
 `;
 
 export default Projects;
