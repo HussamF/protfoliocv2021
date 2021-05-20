@@ -117,7 +117,7 @@ const CompanyDetails = styled.div`
     padding: 0.5rem 1rem;
     border-radius: 5px;
     transition: var(--transition-btn-easeInOut);
-    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 6px 0px,
+    box-shadow: rgba(136, 165, 191, 0.48) 4px 2px 6px 0px,
       rgba(255, 255, 255, 0.8) -2px -2px 6px 0px;
     /* box-shadow: rgba(60, 64, 67, 0.3) 1px 1px 2px 3px,
       rgba(60, 64, 67, 0.4) 5px 3px 2px 3px; */
