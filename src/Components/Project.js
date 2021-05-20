@@ -4,7 +4,8 @@ import IphonePhoto from '../Imgs/iphone.png';
 import { projectData } from '../Data/data';
 import styled from 'styled-components';
 import GithubIcon from '@material-ui/icons/GitHub';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
+
+import DomainDisabledIcon from '@material-ui/icons/DomainDisabled';
 
 const Projects = () => {
   return (
@@ -34,8 +35,26 @@ const Projects = () => {
               <ProjectContent>
                 <ProjectHeaderDesc>{item.headerDesc}</ProjectHeaderDesc>
                 <ProjectDetailDesc>{item.detailDesc}</ProjectDetailDesc>
-                <ProjectStory>{item.projectStory}</ProjectStory>
+                <ProjectStory>
+                  {item.projectStory}
+                  {/* <a
+                    href='javascript:void(0)'
+                    className='icon-link'
+                    target='_blank'
+                  >
+                    <GithubIcon className='social-icon' />
+                  </a>
+
+                  <a
+                    href='http://www.linkedin.com/in/hussam-fanous-1b356511a'
+                    target='_blank'
+                    className='icon-link'
+                  >
+                    <DomainDisabledIcon className='social-icon' />
+                  </a> */}
+                </ProjectStory>
                 <SourceInfo>
+                  <p>check the source code</p>
                   <a
                     href='javascript:void(0)'
                     className='icon-link'
@@ -49,7 +68,7 @@ const Projects = () => {
                     target='_blank'
                     className='icon-link'
                   >
-                    <LinkedInIcon className='social-icon' />
+                    <DomainDisabledIcon className='social-icon' />
                   </a>
                 </SourceInfo>
               </ProjectContent>
@@ -61,8 +80,6 @@ const Projects = () => {
     </>
   );
 };
-
-const SourceInfo = styled.div``;
 
 const ProjectContainer = styled.div`
   width: 1170px;
@@ -87,6 +104,7 @@ const Project = styled.div`
   padding-top: 10rem;
   @media screen and (max-width: 910px) {
     flex-direction: column-reverse;
+    text-align: center;
     gap: 3rem;
   }
 `;
@@ -138,6 +156,9 @@ const InsidePhoneImage = styled.img`
   background-position: top !important;
   background-size: cover !important;
   transition: all 5s linear;
+  @media screen and (max-width: 610) {
+    transition: all 8s linear;
+  }
   &:hover {
     background-position: bottom !important;
   }
@@ -146,6 +167,9 @@ const InsidePhoneImage = styled.img`
 const ProjectContent = styled.div`
   margin-top: 3rem;
   padding: 0 1rem;
+  @media screen and (max-width: 910px) {
+    text-align: center;
+  }
 `;
 
 const ProjectHeaderDesc = styled.h2`
@@ -171,5 +195,27 @@ const BreakLine = styled.div`
     background-color: transparent;
   }
 `;
-
+const SourceInfo = styled.div`
+  display: flex;
+  margin-top: 0.5rem;
+  p {
+    color: ${({ theme }) => theme.color};
+    font-size: var(--p-fontSize);
+  }
+  @media screen and (max-width: 910px) {
+    align-items: center;
+    justify-content: center;
+  }
+  a {
+    padding: 0.5rem;
+    .social-icon {
+      transition: var(--transition-btn-easeInOut);
+      font-size: 2rem;
+      color: ${({ theme }) => theme.color};
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+`;
 export default Projects;

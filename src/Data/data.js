@@ -74,7 +74,7 @@ export const projectData = [
     headerDesc: 'UI/UX total desgin and styling',
     detailDesc: 'HTML5,CSS,JavaScript,react',
     projectStory:
-      'This was my first project that I delieverd to a clinet business 1/11/2020 , it contains information about the office and the recent projects that they have done in the past',
+      'This was my first project that I delieverd to a clinet business 1/11/2020 , it contains information about the office and the recent projects that they have done. ',
 
     imageMac: `${SamtechPc}`,
     imageIphone: `${SamtechPhone}`,
