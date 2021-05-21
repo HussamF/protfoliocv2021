@@ -90,7 +90,7 @@ const NavbarStyled = styled.nav`
     img {
       width: 70%;
       border-radius: 50%;
-      border: 10px solid ${({ theme }) => theme.borderColor};
+      border: 5px solid ${({ theme }) => theme.borderColor};
       transition: var(--transition-easeInOut-mode);
       filter: drop-shadow(0 0.6rem 0.8rem rgba(0, 0, 0, 0.5));
     }
