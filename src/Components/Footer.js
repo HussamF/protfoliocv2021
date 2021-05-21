@@ -38,8 +38,9 @@ export const Footer = () => {
 
 const FooterContainer = styled.section`
   margin: 0 auto;
-  border-top: 1px solid ${({ theme }) => theme.color};
-  padding: 3rem 0 1rem;
+  /* border-top: 1px solid ${({ theme }) => theme.color}; */
+  padding: 3rem 0;
+  background-color: ${({ theme }) => theme.sideBar};
 `;
 const FooterContent = styled.div`
   display: grid;

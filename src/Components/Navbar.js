@@ -55,6 +55,7 @@ const Navbar = ({ theme }) => {
   );
 };
 const NavbarStyled = styled.nav`
+  border-right: 1px dotted var(--border-color);
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -136,6 +137,7 @@ const NavbarStyled = styled.nav`
   footer {
     padding: 0.5rem 0;
     border-top: 1px dotted var(--border-color);
+
     width: 100%;
     p {
       font-size: 1.4rem;

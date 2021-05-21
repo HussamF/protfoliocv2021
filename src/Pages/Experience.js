@@ -73,7 +73,7 @@ const BtnCompanyContainer = styled.div`
   justify-content: center;
   position: relative;
   h1 {
-    font-size: var(--h-fontSize);
+    font-size: 2.5rem;
     color: ${({ theme }) => theme.color};
     margin-bottom: 5rem;
     position: relative;
