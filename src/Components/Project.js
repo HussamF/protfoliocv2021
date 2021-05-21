@@ -56,7 +56,7 @@ const Projects = () => {
                   </a>
                 </SourceInfo>
               </ProjectContent>
-              <BreakLine></BreakLine>
+              {/* <BreakLine></BreakLine> */}
             </ProjectWrapper>
           );
         })}
@@ -69,7 +69,7 @@ const ProjectContainer = styled.div`
   width: 1170px;
   max-width: 90%;
   margin: 0 auto;
-  padding: 3rem 0;
+  padding: 10rem 0;
 `;
 
 const ProjectWrapper = styled.div`
@@ -169,16 +169,17 @@ const ProjectStory = styled.p`
   color: ${({ theme }) => theme.color};
 `;
 
-const BreakLine = styled.div`
-  width: 80%;
-  height: 2px;
-  background-color: var(--primary-color);
-  margin: 0 auto;
-  margin-top: 6rem;
-  &::last-child {
-    background-color: transparent;
-  }
-`;
+// const BreakLine = styled.div`
+//   width: 80%;
+//   height: 2px;
+//   background-color: var(--primary-color);
+//   margin: 0 auto;
+//   margin-top: 6rem;
+//   &:last-of-type {
+//     background-color: transparent;
+//     margin-top: 11rem;
+//   }
+// `;
 const SourceInfo = styled.div`
   display: flex;
   margin-top: 0.5rem;

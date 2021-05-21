@@ -85,11 +85,13 @@ const NavbarStyled = styled.nav`
   .avatar {
     padding: 1rem 0;
     border-bottom: 1px solid ${({ theme }) => theme.borderColor};
+
     img {
       width: 70%;
       border-radius: 50%;
       border: 10px solid ${({ theme }) => theme.borderColor};
       transition: var(--transition-easeInOut-mode);
+      filter: drop-shadow(0 0.6rem 0.8rem rgba(0, 0, 0, 0.5));
     }
   }
   ul {

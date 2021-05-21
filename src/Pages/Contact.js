@@ -44,9 +44,8 @@ const Contact = () => {
             <div className='contact-info'>
               <h1>Contact's Information</h1>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe
-                blanditiis sapiente eum, facere tempora assumenda sit recusandae
-                deleniti quae beatae.
+                You can find me on Whatsapp at the same number, please send me a
+                msg if I didn't pick up the phone
               </p>
               <div className='icon-info'>
                 <div>
@@ -105,7 +104,7 @@ const Contact = () => {
 };
 
 const ContactStyle = styled.section`
-  padding: 8rem 0;
+  padding: 10rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -120,10 +119,10 @@ const ContactStyle = styled.section`
     margin-top: 5rem;
     overflow: hidden;
     transition: var(--transition-btn-easeInOut);
+    -webkit-box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.09);
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.09);
     &:hover {
       transform: scale(1.01);
-      -webkit-box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.09);
-      box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.09);
     }
     .contact-inner-container {
       padding: 2rem;
@@ -131,7 +130,7 @@ const ContactStyle = styled.section`
       justify-content: center;
       align-items: center;
       .contact-info {
-        margin-top: 5rem;
+        margin-top: 3rem;
         h1 {
           font-size: var(--h-fontSize);
           line-height: 1.5;
@@ -145,7 +144,7 @@ const ContactStyle = styled.section`
           color: ${({ theme }) => theme.color};
         }
         .icon-info {
-          margin-top: 4.5rem;
+          margin-top: 3rem;
           div {
             display: flex;
             align-items: center;
@@ -168,7 +167,7 @@ const ContactStyle = styled.section`
         .social-media {
           display: flex;
           justify-content: center;
-          margin-top: 4.5rem;
+          margin-top: 3rem;
           gap: 2rem;
           padding: 0;
           .icon-link {
@@ -193,11 +192,11 @@ const ContactStyle = styled.section`
   }
 
   @media screen and (max-width: 850px) {
-    padding: 5rem 0;
+    padding: 2rem 0 10rem;
   }
 
   @media screen and (max-width: 440px) {
-    padding: 2rem 0;
+    /* padding: 2rem 0; */
     .contact-container {
       .contact-inner-container {
         .contact-info {

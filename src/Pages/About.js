@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import about from '../Imgs/about.jpeg';
 import BTN from '../Components/BTN';
 import Title from '../Components/Title';
+import { Footer } from '../Components/Footer';
 
 const About = () => {
   return (
@@ -18,10 +19,13 @@ const About = () => {
               My name is <span>Hussam</span>
             </h4>
             <p className='paragraph'>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatem, natus quas vero enim praesentium delectus est id
-              fugiat ab libero adipisci recusandae at maxime veritatis! Lorem
-              ipsum,
+              I graduated in 2015 , as a software engineer, since that time I
+              used to work in IT fields , Computers , Laser machines, etc..., I
+              have lots of passion for hardware and troubleshooting software,
+              yet in March 2020 I started on developing my skills as programmer,
+              since then I am getting into coding , front-end web development
+              and now my gaol is to fill my backend gap that I have, to become a
+              full stack developer
             </p>
             <div className='about-info'>
               <div className='info-title'>
@@ -35,12 +39,13 @@ const About = () => {
           </div>
         </div>
       </ImageInfoStyle>
+      <Footer />
     </>
   );
 };
 
 const ImageInfoStyle = styled.section`
-  padding-top: 10rem;
+  padding: 10rem 0;
   display: flex;
   align-items: cente;
   justify-content: center;
@@ -61,8 +66,9 @@ const ImageInfoStyle = styled.section`
       img {
         width: 350px;
         border-radius: 10px;
-        border: 1px solid ${({ theme }) => theme.borderColor};
+        /* border: 1px solid ${({ theme }) => theme.borderColor}; */
         transition: var(--transition-easeInOut-mode);
+        filter: drop-shadow(0 0.4rem 0.5rem rgba(0, 0, 0, 0.5));
       }
     }
 

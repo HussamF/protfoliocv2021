@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Title from '../Components/Title';
 import { useGlobalContext } from '../context';
 import { Modal } from '../Components/Modal';
+import { Footer } from '../Components/Footer';
 
 const Experience = () => {
   const { openModal } = useGlobalContext();
@@ -48,12 +49,13 @@ const Experience = () => {
           className='modal-overlay'
         ></Modal>
       </ExperienceStyle>
+      <Footer />
     </>
   );
 };
 
 const ExperienceStyle = styled.section`
-  padding-top: 10rem;
+  padding: 10rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;

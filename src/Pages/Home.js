@@ -12,14 +12,9 @@ const Home = () => {
       </div>
       <div className='home-content'>
         <h1>
-          Hi there ,I'm<span> Hussam</span>
+          Hello! I'm<span> Hussam</span>
         </h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
-          quibusdam eum earum dolor quaerat saepe id, obcaecati velit explicabo
-          repudiandae qui autem quasi ipsa eos? Quibusdam aperiam quas cumque
-          consequuntur neque ipsam accusantium possimus, animi ratione iste
-        </p>
+        <p>Front-end Developer with IT support background.</p>
         <div className='social-icons'>
           <a href='#' className='icon i-instagram'>
             <InstagramIcon className='inst' />
@@ -62,7 +57,7 @@ const HomeStyle = styled.header`
       }
     }
     p {
-      font-size: var(--p-fontSize);
+      font-size: var(--h-fontSize);
     }
   }
   .social-icons {
