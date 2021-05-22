@@ -2,8 +2,8 @@ import React, { useRef, useEffect, useCallback } from 'react';
 import { useGlobalContext } from '../context';
 import styled from 'styled-components';
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
-import CloseIcon from '@material-ui/icons/Close';
 import { useSpring, animated } from 'react-spring';
+import Close from '../Imgs/close.svg';
 
 export const Modal = ({ dates, duties, title }) => {
   const { isModalOpen, closeModal } = useGlobalContext();
@@ -43,7 +43,7 @@ export const Modal = ({ dates, duties, title }) => {
           <animated.section style={animation} className='anim'>
             <ModalContainer>
               <button className='close-modal-btn' onClick={closeModal}>
-                <CloseIcon />
+                <img src={Close} alt='close' />
               </button>
 
               <h3>
@@ -116,6 +116,10 @@ const ModalContainer = styled.div`
     right: 1.5rem;
     top: 1.5rem;
     border: none;
+    background: none;
+    img {
+      width: 1.5rem;
+    }
   }
 
   h1,
