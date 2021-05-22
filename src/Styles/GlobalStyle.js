@@ -19,7 +19,8 @@ const GlobalStyle = createGlobalStyle`
     --font-dark-color: #313131;
     --font-dark-color-2: #151515;
     --sidebar-dark-color: #191d2b;
-    --sidebar-light-color: #c7c7c7;
+    /* --sidebar-light-color: #c7c7c7; */
+    --sidebar-light-color: #e8e8e8;
     --btn-light-hover: rgba(48, 48, 48, 6);
     --transition-easeInOut-mode: all 1s ease-in-out;
     --transition-btn-easeInOut:all .25s ease-in-out;
