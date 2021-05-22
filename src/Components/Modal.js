@@ -84,11 +84,14 @@ const ModalOverlay = styled.div`
   z-index: 100;
   .anim {
     max-width: 90% !important;
-    width: 970px;
+    width: 670px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    @media screen and (max-width: 1200px) {
+      width: 970px;
+    }
   }
 `;
 
@@ -102,11 +105,11 @@ const ModalContainer = styled.div`
   max-height: 90vh;
   position: relative;
   overflow-y: auto;
-
+  /* margin-left: 30rem; */
   z-index: 100;
   border-radius: 20px;
-  @media screen and (max-width: 1100px) {
-    /* margin-left: 20rem; */
+  @media screen and (max-width: 1200px) {
+    margin-left: 0rem;
   }
   @media screen and (max-width: 650px) {
     margin: 0 auto;

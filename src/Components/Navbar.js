@@ -88,7 +88,7 @@ const NavbarStyled = styled.nav`
     border-bottom: 1px solid ${({ theme }) => theme.borderColor};
 
     img {
-      width: 70%;
+      width: 60%;
       border-radius: 50%;
       border: 5px solid ${({ theme }) => theme.borderColor};
       transition: var(--transition-easeInOut-mode);
@@ -97,6 +97,8 @@ const NavbarStyled = styled.nav`
   }
   ul {
     width: 100%;
+    /* margin: 0 auto;
+    height: 35%; */
     li {
       .active {
         color: var(--primary-color);
