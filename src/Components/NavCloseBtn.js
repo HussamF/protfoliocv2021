@@ -2,6 +2,7 @@ import React from 'react';
 import closeMenu from '../Imgs/cancel.svg';
 import styled from 'styled-components';
 import { useGlobalContext } from '../context';
+import Close from '../Imgs/close.svg';
 
 function NavCloseBtn({ theme }) {
   const { closeSidebar } = useGlobalContext();
@@ -11,7 +12,7 @@ function NavCloseBtn({ theme }) {
       className='nav-toggle-close'
       to='#'
     >
-      <img src={`${theme === 'light' ? closeMenu : closeMenu}`} alt='menu' />
+      <img src={`${theme === 'light' ? Close : Close}`} alt='menu' />
     </NavCloseBtnStyle>
   );
 }
@@ -21,8 +22,8 @@ const NavCloseBtnStyle = styled.div`
   @media screen and (max-width: 1200px) {
     display: block;
     img {
-      width: 30px;
-      height: 30px;
+      width: 1.5rem;
+
       position: absolute;
       top: 3rem;
       right: 3rem;
