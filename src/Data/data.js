@@ -70,6 +70,8 @@ export const projectData = [
       'This was my first project that I delieverd to a clinet business 1/11/2020 , it contains information about the office and the recent projects that they have done in the past',
     imageMac: `${LwisPc}`,
     imageIphone: `${LwisPhone}`,
+    websiteLink: 'https://www.architettigmad.com/',
+    githubLink: '#',
   },
   {
     id: '2',
@@ -80,6 +82,8 @@ export const projectData = [
 
     imageMac: `${SamtechPc}`,
     imageIphone: `${SamtechPhone}`,
+    websiteLink: 'https://samtech-developing.ml/',
+    githubLink: '#',
   },
   {
     id: '3',
@@ -89,5 +93,7 @@ export const projectData = [
       'An embassy website , not live yet, still lacking for few informations and features.',
     imageMac: `${EmbPc}`,
     imageIphone: `${EmbPhone}`,
+    websiteLink: '#',
+    githubLink: '#',
   },
 ];

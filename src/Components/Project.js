@@ -48,7 +48,7 @@ const Projects = () => {
                   </a>
 
                   <a
-                    href='http://www.linkedin.com/in/hussam-fanous-1b356511a'
+                    href={item.websiteLink}
                     target='_blank'
                     className='icon-link'
                   >
