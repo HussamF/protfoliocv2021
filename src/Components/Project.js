@@ -1,11 +1,9 @@
 import React from 'react';
-import MacPhoto from '../Imgs/mac1.png';
+import MacPhoto from '../Imgs/mac.png';
 import IphonePhoto from '../Imgs/iphone.png';
 import { projectData } from '../Data/data';
 import styled from 'styled-components';
 import GithubIcon from '@material-ui/icons/GitHub';
-
-import DomainDisabledIcon from '@material-ui/icons/DomainDisabled';
 import DomainDisabledRoundedIcon from '@material-ui/icons/DomainDisabledRounded';
 
 const Projects = () => {
@@ -40,7 +38,7 @@ const Projects = () => {
                 <SourceInfo>
                   <p>check the source code</p>
                   <a
-                    href='javascript:void(0)'
+                    href={item.githubLink}
                     className='icon-link'
                     target='_blank'
                   >

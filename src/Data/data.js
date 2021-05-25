@@ -71,7 +71,7 @@ export const projectData = [
     imageMac: `${LwisPc}`,
     imageIphone: `${LwisPhone}`,
     websiteLink: 'https://www.architettigmad.com/',
-    githubLink: '#',
+    githubLink: 'https://github.com/HussamF/GMAD-architecture-office',
   },
   {
     id: '2',
@@ -83,12 +83,12 @@ export const projectData = [
     imageMac: `${SamtechPc}`,
     imageIphone: `${SamtechPhone}`,
     websiteLink: 'https://samtech-developing.ml/',
-    githubLink: '#',
+    githubLink: 'https://github.com/HussamF/samtech',
   },
   {
     id: '3',
     headerDesc: 'UI/UX Embassy website',
-    detailDesc: 'HTML5, CSS, Vanilla JavaScriot',
+    detailDesc: 'HTML5, CSS, Vanilla JavaScript',
     projectStory:
       'An embassy website , not live yet, still lacking for few informations and features.',
     imageMac: `${EmbPc}`,

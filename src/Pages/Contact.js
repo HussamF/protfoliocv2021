@@ -1,7 +1,4 @@
 import React from 'react';
-// import emailjs from 'emailjs-com';
-// import './contact.scss';
-// import { useTranslation } from 'react-i18next';
 import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
@@ -10,8 +7,6 @@ import GithubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import styled from 'styled-components';
 import Title from '../Components/Title';
-import BTN from '../Components/BTN';
-import Rome from '../Imgs/r4.jpg';
 
 const Contact = () => {
   // function sendEmail(e) {

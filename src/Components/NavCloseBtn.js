@@ -1,5 +1,4 @@
 import React from 'react';
-import closeMenu from '../Imgs/cancel.svg';
 import styled from 'styled-components';
 import { useGlobalContext } from '../context';
 import Close from '../Imgs/close.svg';
