@@ -19,20 +19,20 @@ const About = () => {
               My name is <span>Hussam</span>
             </h4>
             <p className='paragraph'>
-              I graduated in 2015 , as a software engineer, since that time I
-              used to work in IT fields , Computers , Laser machines, etc..., I
+              I graduated in 2015, as a software engineer, since that time I
+              used to work in IT fields, Computers, Laser machines, etc..., I
               have lots of passion for hardware and troubleshooting software,
               yet in March 2020 I started on developing my skills as programmer,
-              since then I am getting into coding , front-end web development
-              and now my gaol is to fill my backend gap that I have, to become a
+              since then I am getting into coding, front-end web development and
+              now my gaol is to fill my backend gap that I have, to become a
               full stack developer
             </p>
             <div className='about-info'>
               <div className='info-title'>
                 <p>Age: 34</p>
-                <p>Languages: Arabic, English , Italian and Chinese </p>
-                <p>Location: Italy,Rome</p>
-                <p className='p-margin'>Service: Freelance</p>
+                <p>Languages: Arabic, English, Italian and Chinese </p>
+                <p>Location: Italy, Rome</p>
+                <p className='p-margin'>Service: Web development</p>
                 <BTN title='Download CV' />
               </div>
             </div>

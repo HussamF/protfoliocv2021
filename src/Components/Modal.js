@@ -47,7 +47,7 @@ export const Modal = ({ dates, duties, title }) => {
               </button>
 
               <h3>
-                <span>Jop Title</span> : {title}
+                <span>Job Title</span> : {title}
               </h3>
 
               <p className='job-date'>
