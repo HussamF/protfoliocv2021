@@ -11,13 +11,13 @@ export const data = [
     title: 'Front-end Development Freelance',
     dates: 'Rome January /2021 currently working.',
     duties: [
-      ' Html5, Css, Sass, JavaScript, ReactJS, (light)NodeJS.',
-      ' Started developing my skills in these technologies above at March/2020.',
-      ' Lunched VAT number at Jan/2021.',
-      ' I have built an official website for my first client "www.architettigmad.com" Html, Css, Vanilla JavaScript.',
-      ' Built my own official website as portfolio "www.samtech-developing.ml" ReactJS, JSX, Sass,StyledComponents,EmailJS, smooth scroll, i18net Multi Languages.',
-      ' Now working on improving these skills and uploading to github',
-      'My next plan would be learning Python',
+      'Html5, Css, Sass, JavaScript, ReactJS, (light)NodeJS.',
+      'Started developing my skills in these technologies above at March/2020.',
+      'Lunched VAT number at Jan/2021.',
+      'I have built an official website for my first client "www.architettigmad.com" Html, Css, Vanilla JavaScript.',
+      'Built my own official website as portfolio "www.samtech-developing.ml" ReactJS, JSX, Sass, StyledComponents, EmailJS, smooth scroll, i18net Multi Languages.',
+      'Now working on improving these skills and uploading to github.',
+      'My next plan would be learning Python.',
     ],
     company: 'Samtech',
   },
@@ -36,7 +36,7 @@ export const data = [
   },
   {
     id: '3',
-    title: 'IT support , Laser"s & Heating"s press operatin',
+    title: 'IT support, Laser"s & Heating"s press machines',
     dates: 'QATAR-AL DOHA November/2016 –March/ 2018.',
     duties: [
       'Provide Technical support and operator training for Laser cutting/engraving, Heating press printing, and sublimation/3D printing systems.',
@@ -67,7 +67,7 @@ export const projectData = [
     headerDesc: 'UI/UX Website architecture office.',
     detailDesc: 'HTML5, CSS, Vanilla JavaScript',
     projectStory:
-      'This was my first project that I delieverd to a clinet business 1/11/2020, it contains information about the office and the recent projects that they have done in the past.',
+      'This was my first project that I delieverd to a client business 1/11/2020, it contains information about the office and the recent projects that they have done in the past.',
     imageMac: `${LwisPc}`,
     imageIphone: `${LwisPhone}`,
     websiteLink: 'https://www.architettigmad.com/',
