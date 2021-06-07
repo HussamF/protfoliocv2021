@@ -4,6 +4,8 @@ import EmbPhone from '../Imgs/embphone.png';
 import EmbPc from '../Imgs/embpc.png';
 import SamtechPhone from '../Imgs/samtechphone.png';
 import SamtechPc from '../Imgs/samtechpc.png';
+import PizzaPhone from '../Imgs/pizzaphone.jpg';
+import PizzaPc from '../Imgs/pizzapc.jpg';
 
 export const data = [
   {
@@ -75,6 +77,17 @@ export const projectData = [
   },
   {
     id: '2',
+    headerDesc: 'UI/UX Pizzeria website',
+    detailDesc: 'HTML5, CSS, React JS, Ecommercejs',
+    projectStory:
+      'Demo Ecommerce app, allowing clients to make pizza order, It has a landing page and saperate menu page, I used styled-components and material UI for practice purposes, payments are done by Stripe',
+    imageMac: `${PizzaPc}`,
+    imageIphone: `${PizzaPhone}`,
+    websiteLink: 'https://sampizzeria.netlify.app/',
+    githubLink: 'https://github.com/HussamF/pizzeria',
+  },
+  {
+    id: '3',
     headerDesc: 'UI/UX Freelance webdeveloper.',
     detailDesc: 'HTML5, CSS, React JS',
     projectStory:
@@ -86,7 +99,7 @@ export const projectData = [
     githubLink: 'https://github.com/HussamF/samtech',
   },
   {
-    id: '3',
+    id: '4',
     headerDesc: 'UI/UX Embassy website',
     detailDesc: 'HTML5, CSS, Vanilla JavaScript',
     projectStory:
