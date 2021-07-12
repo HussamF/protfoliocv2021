@@ -194,9 +194,10 @@ const SourceInfo = styled.div`
     .social-icon {
       transition: var(--transition-btn-easeInOut);
       font-size: 2rem;
-      color: ${({ theme }) => theme.color};
+      /* color: ${({ theme }) => theme.color}; */
+      color: var(--primary-color);
       &:hover {
-        color: var(--primary-color);
+        color: #ff2700;
       }
     }
   }
