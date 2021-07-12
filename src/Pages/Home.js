@@ -16,10 +16,20 @@ const Home = () => {
         </h1>
         <p>Front-end Developer with IT support background.</p>
         <div className='social-icons'>
-          <a href='#' className='icon i-instagram'>
+          <a
+            href='#'
+            className='icon i-instagram'
+            href='http://www.instagram.com/hussamfanos'
+            target='_blank'
+          >
             <InstagramIcon className='inst' />
           </a>
-          <a href='#' className='icon i-github'>
+          <a
+            href='#'
+            className='icon i-github'
+            href='https://github.com/HussamF'
+            target='_blank'
+          >
             <GithubIcon className='git' />
           </a>
         </div>

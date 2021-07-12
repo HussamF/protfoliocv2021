@@ -64,7 +64,7 @@ const Contact = () => {
               </div>
               <div className='social-media'>
                 <a
-                  href='javascript:void(0)'
+                  href='https://github.com/HussamF'
                   className='icon-link'
                   target='_blank'
                 >
